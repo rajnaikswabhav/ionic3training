@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Name Match</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-label floating>Person 1</ion-label>
+            <ion-input type="text" [(ngModel)]="person1"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Person 2</ion-label>
+            <ion-input type="text" [(ngModel)]="person2"></ion-input>
+        </ion-item>
+    </ion-list>
+    <button ion-button (click)="calculateLovePercentage()">Default</button>
+    <ion-card>
+        <ion-card-header>
+            <ion-grid>
+                <ion-row >
+                    <ion-col col-4>{{person1||'??'}}</ion-col>
+                    <ion-col col-4><ion-icon name="heart" style="color:red;font-size:3em"></ion-icon></ion-col>
+                    <ion-col col-4>{{person2||'??'}}</ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-header>
+        <ion-card-content>
+            <h1>{{lovePercentage}}</h1>
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>
